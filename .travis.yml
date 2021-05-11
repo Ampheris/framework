@@ -1,0 +1,14 @@
+language: php
+
+php:
+  - "7.4"
+
+os: windows
+
+before_script:
+  - make install
+
+script:
+  - make test
+  - make phpunit
+  - make phpcs phpmd phpstan

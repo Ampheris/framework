@@ -1,11 +1,12 @@
 <?php
-declare(strict_types=1);
+/*declare(strict_types=1);
 
 namespace Ampheris\ampController;
 
 use Nyholm\Psr7\Factory\Psr17Factory;
 use Nyholm\Psr7\Response;
 use Psr\Http\Message\ResponseInterface;
+
 use function Ampheris\YatzyFunctions\{yatzyCommandCheck};
 use function Mos\Functions\{renderView, url};
 
@@ -32,4 +33,4 @@ class Yatzy
             ->withStatus(301)
             ->withHeader("Location", url("/yatzy"));
     }
-}
+}*/

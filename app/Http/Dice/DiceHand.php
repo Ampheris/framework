@@ -7,26 +7,26 @@ class DiceHand
 {
     public $listOfDices;
 
-    function __construct()
+    public function __construct()
     {
         $this->listOfDices = [];
     }
 
-    function initDices($numOfDices)
+    public function initDices($numOfDices)
     {
         for ($i = 0; $i < $numOfDices; $i++) {
             array_push($this->listOfDices, new GraphicalDice());
         }
     }
 
-    function rollAllDices()
+    public function rollAllDices()
     {
         foreach ($this->listOfDices as $dice) {
             $dice->throwDice();
         }
     }
 
-    function getAllRolledValues(): int
+    public function getAllRolledValues(): int
     {
         $result = 0;
 
@@ -37,7 +37,7 @@ class DiceHand
         return $result;
     }
 
-    function getGraphicDices(): array
+    public function getGraphicDices(): array
     {
         $returnArr = [];
 
@@ -48,13 +48,12 @@ class DiceHand
         return $returnArr;
     }
 
-    function getSavedGraphicDices($num, $arr): array
+    public function getSavedGraphicDices($num, $arr): array
     {
         $returnArr = [];
 
         foreach ($arr as $dice) {
-            if ($dice->lastestThrow() == $num)
-            {
+            if ($dice->lastestThrow() == $num) {
                 array_push($returnArr, $dice->graphicDice());
             }
         }
@@ -62,7 +61,8 @@ class DiceHand
         return $returnArr;
     }
 
-    function getAllLatestValues(): array {
+    public function getAllLatestValues(): array
+    {
         $arrayList = [];
 
         foreach ($this->listOfDices as $dice) {

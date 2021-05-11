@@ -2,8 +2,8 @@
 
 use Ampheris\ampController\Books;
 use Ampheris\ampController\DiceGame;
-use Illuminate\Support\Facades\Route;
 use App\Models\Highscore;
+use Illuminate\Support\Facades\Route;
 
 /*
 |--------------------------------------------------------------------------
@@ -27,8 +27,8 @@ Route::post('/diceGame/updateSession', [DiceGame::class, 'updateSession']);
 
 // Route that flushes the session values and redirects backt o the frontpage.
 Route::get('/session', function () {
-   session()->flush();
-   return redirect('/');
+    session()->flush();
+    return redirect('/');
 });
 
 // Route for the highscores, has database table directly connected to it in the Route.

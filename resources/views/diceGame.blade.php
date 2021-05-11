@@ -3,7 +3,6 @@
 <?php
 namespace Ampheris\Dice;
 
-
 use function Ampheris\Functions\generateHTML;
 
 // Session values
@@ -44,9 +43,9 @@ $user = session()->get('gameUser');
 @section('content')
     <h1>Dice 21 Game, round <?= session()->get('gameGameRounds'); ?></h1>
     <?php if (session()->get('gameIsInitiated') == false) { ?>
-        <h2>Choose 1 or 2 dices</h2>
-        <button class="num-dices" value="1">One dice</button>
-        <button class="num-dices" value="2">Two dices</button>
+    <h2>Choose 1 or 2 dices</h2>
+    <button class="num-dices" value="1">One dice</button>
+    <button class="num-dices" value="2">Two dices</button>
     <?php } ?>
 
     <?php if (session()->get('gameWinner') == 'None') { ?>
@@ -66,11 +65,11 @@ $user = session()->get('gameUser');
     <h2>Game completed!</h2>
     <p>Your score: <?= session()->get('gameUserScore') ?></p>
     <p>Computers score: <?= session()->get('gameComputerScore') ?></p>
-    <?php if (session()->get('gameWinner')  == 'User') { ?>
+    <?php if (session()->get('gameWinner') == 'User') { ?>
     <p>Congratulations, you have won the round!</p>
-    <?php } elseif (session()->get('gameWinner')  == 'Computer') { ?>
+    <?php } elseif (session()->get('gameWinner') == 'Computer') { ?>
     <p>Sorry, the computer have won the round!</p>
-    <?php } elseif (session()->get('gameWinner')  == 'NoWinner') { ?>
+    <?php } elseif (session()->get('gameWinner') == 'NoWinner') { ?>
     <p>Sorry, no one has won the round!</p>
     <?php } ?>
     <button id="restart">Restart</button>

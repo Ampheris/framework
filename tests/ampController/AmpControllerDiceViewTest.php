@@ -4,11 +4,9 @@ declare(strict_types=1);
 
 namespace Tests\ampController;
 
-
 use Ampheris\ampController\DiceGame;
-use Tests\TestCase;
 use Illuminate\Http\Request;
-
+use Tests\TestCase;
 
 /**
  * Test cases for the controller Dice view.
@@ -24,7 +22,7 @@ class AmpControllerDiceViewTest extends TestCase
         $controller = new DiceGame();
         $this->assertInstanceOf("\Ampheris\ampController\DiceGame", $controller);
     }
-    
+
 
     /**
      * Check that the controller returns correct response.
@@ -42,5 +40,4 @@ class AmpControllerDiceViewTest extends TestCase
         $res = $controller->updateSession($request);
         $this->assertInstanceOf($exp, $res);
     }
-
 }
