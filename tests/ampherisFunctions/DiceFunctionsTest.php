@@ -1,12 +1,13 @@
 <?php
 
+
 namespace Tests\ampherisFunctions;
 
 use Ampheris\Dice\DiceHand;
 use Illuminate\Http\Request;
 use Tests\TestCase;
-use function Ampheris\Functions\generateHTML;
-use function Ampheris\Functions\commandCheck;
+use function Ampheris\Functions\{commandCheck, generateHTML};
+
 
 /**
  * Test cases for the functions in src/diceFunctions.php.
@@ -56,6 +57,7 @@ class DiceFunctionsTest extends TestCase
         $this->assertEquals($expected, $actual);
 
         session()->flush();
+
     }
 
     /**

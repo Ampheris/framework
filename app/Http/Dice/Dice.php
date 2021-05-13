@@ -1,13 +1,15 @@
 <?php
 
+
 namespace Ampheris\Dice;
+
 
 class Dice
 {
     public $diceSides;
     public $lastestThrowValue;
 
-    public function __construct()
+    function __construct()
     {
         $this->diceSides = 6;
         $this->lastestThrowValue = 0;

@@ -6,7 +6,6 @@ namespace Ampheris\Functions;
 
 use Ampheris\Dice\DiceHand;
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\DB;
 
 /**
  * Functions.
@@ -80,17 +79,12 @@ function generateHTML(DiceHand $user): string
 
 function checkScore()
 {
+
     $userScore = session()->get('gameUserScore');
     $computerScore = session()->get('gameComputerScore');
 
     if ($userScore == 21 or ($userScore < 21 and $computerScore > 21)) {
         session(['gameWinner' => 'User']);
-        if ($userScore == 21) {
-            // Updates the database table highscores Dice 21 score highscore aka number of wins.
-            DB::table('highscores')
-                ->where('id', 1)
-                ->update(['score' => DB::raw(('score + 1'))]);
-        }
     }
 
     // If computer has score 21 it wins, even if user got 21 in score.
@@ -111,6 +105,13 @@ function resetGame()
     session(['gameIsInitiated' => false]);
     session(['gameWinner' => 'None']);
     session(['gameDiceThrown' => false]);
+
+    /*$_SESSION['game']['gameRounds'] += 1;
+    $_SESSION['game']['userScore'] = 0;
+    $_SESSION['game']['computerScore'] = 0;
+    $_SESSION['game']['isInitiated'] = false;
+    $_SESSION['game']['winner'] = 'None';
+    $_SESSION['game']['diceThrown'] = false;*/
 }
 
 /**

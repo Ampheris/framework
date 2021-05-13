@@ -17,25 +17,25 @@ namespace Mos\Functions;
 function getRoutePath(): string
 {
     $offset = strlen(dirname($_SERVER["SCRIPT_NAME"] ?? null));
-    $path = substr($_SERVER["REQUEST_URI"] ?? "", $offset);
+    $path   = substr($_SERVER["REQUEST_URI"] ?? "", $offset);
 
     return $path ? $path : "";
 }
+
 
 
 /**
  * Render the view and return its rendered content.
  *
  * @param string $template to use when rendering the view.
- * @param array $data send to as variables to the view.
+ * @param array  $data     send to as variables to the view.
  *
  * @return string with the route path requested.
  */
 function renderView(
     string $template,
     array $data = []
-): string
-{
+): string {
     extract($data);
 
     ob_start();
@@ -78,32 +78,34 @@ function renderView(
 //
 
 
-/**
- * Send a response to the client.
- *
- * @param int $status HTTP status code to send to client.
- *
- * @return void
- */
-function sendResponse(string $body, int $status = 200): void
-{
-    http_response_code($status);
-    echo $body;
-}
+ /**
+  * Send a response to the client.
+  *
+  * @param int    $status   HTTP status code to send to client.
+  *
+  * @return void
+  */
+ function sendResponse(string $body, int $status = 200): void
+ {
+     http_response_code($status);
+     echo $body;
+ }
 
 
-/**
- * Redirect to an url.
- *
- * @param string $url where to redirect.
- *
- * @return void
- */
-function redirectTo(string $url): void
-{
-    http_response_code(200);
-    header("Location: $url");
-}
+
+ /**
+  * Redirect to an url.
+  *
+  * @param string $url where to redirect.
+  *
+  * @return void
+  */
+ function redirectTo(string $url): void
+ {
+     http_response_code(200);
+     header("Location: $url");
+ }
+
 
 
 /**
@@ -118,6 +120,7 @@ function url(string $path): string
 {
     return getBaseUrl() . $path;
 }
+
 
 
 /**
@@ -152,6 +155,7 @@ function getBaseUrl()
 }
 
 
+
 /**
  * Get the current url of the request.
  *
@@ -162,8 +166,8 @@ function getCurrentUrl(): string
     $scheme = $_SERVER["REQUEST_SCHEME"] ?? "";
     $server = $_SERVER["SERVER_NAME"] ?? "";
 
-    $port = $_SERVER["SERVER_PORT"] ?? "";
-    $port = ($port === "80")
+    $port  = $_SERVER["SERVER_PORT"] ?? "";
+    $port  = ($port === "80")
         ? ""
         : (($port === 443 && ($_SERVER["HTTPS"] ?? null) === "on")
             ? ""
@@ -171,12 +175,13 @@ function getCurrentUrl(): string
 
     $uri = rtrim(rawurldecode($_SERVER["REQUEST_URI"] ?? ""), "/");
 
-    $url = htmlspecialchars($scheme) . "://";
+    $url  = htmlspecialchars($scheme) . "://";
     $url .= htmlspecialchars($server)
         . $port . htmlspecialchars(rawurldecode($uri));
 
     return $url;
 }
+
 
 
 /**

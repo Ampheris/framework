@@ -14,7 +14,7 @@ class DiceGame
 {
     public function index()
     {
-        return view('/diceGame');
+        return view('diceGame');
     }
 
 
