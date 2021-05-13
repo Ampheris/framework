@@ -2,18 +2,12 @@
 
 <p>Travis</p>
 
-[![Build Status](https://travis-ci.com/github/Ampheris/framework.svg?branch=main)](https://www.travis-ci.com/canax/router)
+[![Build Status](https://travis-ci.com/Ampheris/framework.svg?branch=main)](https://www.travis-ci.com/canax/router)
 
 <p>Scrutinizer</p>
 
-[![Build Status](https://scrutinizer-ci.com/g/canax/database/badges/build.png?b=main)](https://scrutinizer-ci.com/g/canax/database/build-status/master) [![Code Coverage](https://scrutinizer-ci.com/g/canax/router/badges/coverage.png?b=master)](https://scrutinizer-ci.com/g/canax/router/?branch=master) [![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/canax/database/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/canax/database/?branch=master)
+[![Build Status](https://scrutinizer-ci.com/g/Ampheris/framework/badges/build.png?b=main)](https://scrutinizer-ci.com/g/canax/database/build-status/master) [![Code Coverage](https://scrutinizer-ci.com/g/Ampheris/framework/badges/coverage.png?b=main)](https://scrutinizer-ci.com/g/canax/router/?branch=master) [![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/Ampheris/framework/badges/quality-score.png?b=main)](https://scrutinizer-ci.com/g/canax/database/?branch=master)
 
-<p align="center">
-<a href="https://travis-ci.org/laravel/framework"><img src="https://travis-ci.org/laravel/framework.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
 
 ## About Laravel
 
