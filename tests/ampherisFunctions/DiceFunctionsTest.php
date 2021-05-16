@@ -8,6 +8,7 @@ use Illuminate\Http\Request;
 use Tests\TestCase;
 use function Ampheris\Functions\{commandCheck, generateHTML};
 
+
 /**
  * Test cases for the functions in src/diceFunctions.php.
  */

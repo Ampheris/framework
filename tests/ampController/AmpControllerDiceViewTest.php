@@ -25,18 +25,18 @@ class AmpControllerDiceViewTest extends TestCase
         $this->assertInstanceOf("\Ampheris\ampController\DiceGame", $controller);
     }
 
-//    /**
-//     * Check that the controller returns a response.
-//     * @preserveGlobalState disabled
-//     */
-//    public function testControllerReturnsResponse()
-//    {
-//        $controller = new DiceGame();
-//
-//        $exp = "Illuminate\View\View";
-//        $res = $controller->index();
-//        $this->assertInstanceOf($exp, $res);
-//    }
+    /**
+     * Check that the controller returns a response.
+     * @preserveGlobalState disabled
+     */
+    public function testControllerReturnsResponse()
+    {
+        $controller = new DiceGame();
+
+        $exp = "Illuminate\View\View";
+        $res = $controller->index();
+        $this->assertInstanceOf($exp, $res);
+    }
 
     /**
      * Check that the controller returns correct response.
