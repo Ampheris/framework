@@ -2,7 +2,7 @@ imports:
   - php
 
 filter:
-  excluded_paths: [ vendor/*, test/* ]
+  excluded_paths: [ vendor/*, tests/* ]
 
 build:
   nodes:
@@ -17,5 +17,5 @@ build:
           - command: "make phpunit"
             coverage:
               file: "build/coverage.clover"
-              format: "php-cc"
+              format: "clover"
 
