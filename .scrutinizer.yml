@@ -10,9 +10,9 @@ build:
       environment:
         php:
           version: 7.3
-  tests:
-    override:
-      - command: "make phpunit"
-        coverage:
-          file: "clover.xml"
-          format: "clover"
+      tests:
+        override:
+          - command: "make phpunit"
+            coverage:
+              file: "clover.xml"
+              format: "php-clover"
